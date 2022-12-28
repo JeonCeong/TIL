@@ -5,15 +5,8 @@ import numpy as np
 import pandas as pd
 
 
-a = st.text_input('a를 입력하시오') 
-b = st.text_input('b를 입력하시오')
-c = st.text_input('c를 입력하시오') 
-
-
-
-yes_list = ["yes", "Yes", "YES", "yeah", "Yeah", "YEAH", "Y", "y"]
-
 def func(a,b,c): #2차 방정식 계산 함수(본 함수만 사용)
+  
     D=b**2-4*a*c
     if D>0:
         x1=round((-b-D**0.5)/2*a)
@@ -26,37 +19,12 @@ def func(a,b,c): #2차 방정식 계산 함수(본 함수만 사용)
     else:
         print("허근입니다")
         
-        
 def main(): #main 함수는 예시로 제작
-    while True:
-        try:
-            print('                                                ')
-            print('------------------------------------------------')
-            print('   2차 방정식의 근을 구해주는 프로그램 입니다 ')
-            print('------------------------------------------------')
-            print('   2차 방정식의 기본 형태 : aX^2 + bX + c = 0   ')
-            print('----------------------------------------------')
-            a = float(input('        a의 값을 입력하십시오 : '))
-            b = float(input('        b의 값을 입력하십시오 : '))
-            c = float(input('        c의 값을 입력하십시오 : '))
-            print('----------------------------------------------')
-            func(a,b,c)
-            
-            print('----------------------------------------------')
-            ans = input("다시 진행하시겠습니까? [y/n] >>")
-            if ans in yes_list:
-                continue
-                print('----------------------------------------------')
-                print('                                              ')
-            else:
-                break
-                
-        except:
-            print('----------------------------------------------')
-            print('*******************ERROR!!********************')
-            print('----------------------------------------------')
-            print("          숫자를 입력하시기 바랍니다.         ")
-            
+
+    a = st.number_input('a를 입력하시오') 
+    b = st.number_input('b를 입력하시오')
+    c = st.number_input('c를 입력하시오') 
+    st.number(func(a,b,c))
 
 
 if __name__ == '__main__':
