@@ -1,3 +1,10 @@
+from numpy.core.fromnumeric import repeat
+import streamlit as st
+import altair as alt
+import numpy as np
+import pandas as pd
+
+
 yes_list = ["yes", "Yes", "YES", "yeah", "Yeah", "YEAH", "Y", "y"]
 
 def func(a,b,c): #2차 방정식 계산 함수(본 함수만 사용)
@@ -15,6 +22,8 @@ def func(a,b,c): #2차 방정식 계산 함수(본 함수만 사용)
         
         
 def main(): #main 함수는 예시로 제작
+     file = st.sidebar.level = st.slider("레벨을 선택하세요.", 1, 5)
+
     while True:
         try:
             print('                                                ')
@@ -45,5 +54,6 @@ def main(): #main 함수는 예시로 제작
             print("          숫자를 입력하시기 바랍니다.         ")
             
 
-if __name__ == '__main__': 
-    main()
+
+if __name__ == '__main__':
+    main()   
