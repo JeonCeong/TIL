@@ -5,6 +5,12 @@ import numpy as np
 import pandas as pd
 
 
+a = st.text_input('a를 입력하시오') 
+b = st.text_input('b를 입력하시오')
+c = st.text_input('c를 입력하시오') 
+
+
+
 yes_list = ["yes", "Yes", "YES", "yeah", "Yeah", "YEAH", "Y", "y"]
 
 def func(a,b,c): #2차 방정식 계산 함수(본 함수만 사용)
@@ -22,8 +28,6 @@ def func(a,b,c): #2차 방정식 계산 함수(본 함수만 사용)
         
         
 def main(): #main 함수는 예시로 제작
-     file = st.sidebar.level = st.slider("레벨을 선택하세요.", 1, 5)
-
     while True:
         try:
             print('                                                ')
