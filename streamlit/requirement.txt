@@ -1,9 +1,0 @@
-libs
-numpy
-pandas
-sklearn.metrics.pairwise
-cosine_similarity
-ast
-literal_eval
-sklearn.feature_extraction.text
-CountVectorizer
